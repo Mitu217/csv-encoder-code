@@ -1,11 +1,18 @@
-# csv-reader
+package main
 
-this repo is custom csv reader sample
+import (
+	"log"
+	"strings"
 
+	"github.com/Mitu217/csv_reader/csv"
+)
 
-## Usage
+const csvData = `
+id,val1,val2
+1,100,200
+2,102,202
+`
 
-```
 func main() {
 	r := strings.NewReader(csvData)
 	dec := csv.NewDecoder(r,
@@ -28,4 +35,3 @@ func DecodeTotal(objs *[]*csv.CsvObj) error {
 	}
 	return nil
 }
-```
